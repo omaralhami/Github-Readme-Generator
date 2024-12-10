@@ -2,21 +2,24 @@
 
 A modern web application that helps you create beautiful and informative GitHub profile READMEs with ease.
 
+[![GitHub Profile README Generator](https://github.com/only-mar/github-readme-generator/raw/main/preview.png)](https://github-readmegenerator.netlify.app/)
+
+🌐 **[Try it now](https://github-readmegenerator.netlify.app/)**
+
 ## Features
 
 - 🎨 Multiple pre-designed templates
 - ✏️ Easy-to-use visual editor
 - 👁️ Live preview
 - 📱 Responsive design
-- 🔄 Copy & paste or download generated README
+- 🔄 Copy & paste generated README
 
 ## Getting Started
 
-1. Visit the website
-2. Click "Get Started"
-3. Choose a template
-4. Customize your content
-5. Preview and download your README
+1. Visit [GitHub Profile README Generator](https://github-readmegenerator.netlify.app/)
+2. Choose a template
+3. Customize your content
+4. Preview and copy your README
 
 ## Development
 
