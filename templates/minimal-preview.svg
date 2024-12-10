@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff"/>
+  
+  <!-- Content -->
+  <g transform="translate(40, 40)">
+    <!-- Name -->
+    <text x="0" y="30" font-family="Arial" font-size="24" fill="#000000">John Doe</text>
+    <text x="0" y="60" font-family="Arial" font-size="16" fill="#666666">Developer</text>
+    
+    <!-- Divider -->
+    <line x1="0" y1="90" x2="720" y2="90" stroke="#eaeaea"/>
+    
+    <!-- About -->
+    <text x="0" y="120" font-family="Arial" font-size="14" fill="#333333">Building things with code.</text>
+    
+    <!-- Links -->
+    <g transform="translate(0, 150)">
+      <circle cx="12" cy="12" r="6" fill="#333333"/>
+      <circle cx="32" cy="12" r="6" fill="#333333"/>
+      <circle cx="52" cy="12" r="6" fill="#333333"/>
+    </g>
+    
+    <!-- Projects -->
+    <text x="0" y="200" font-family="Arial" font-size="14" fill="#666666">Selected Projects</text>
+    
+    <!-- Project Cards -->
+    <g transform="translate(0, 220)">
+      <rect width="230" height="80" rx="4" fill="#fafafa" stroke="#eaeaea"/>
+      <rect x="245" width="230" height="80" rx="4" fill="#fafafa" stroke="#eaeaea"/>
+      <rect x="490" width="230" height="80" rx="4" fill="#fafafa" stroke="#eaeaea"/>
+    </g>
+  </g>
+</svg> 

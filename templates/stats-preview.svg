@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff"/>
+  
+  <!-- Header -->
+  <g transform="translate(40, 40)">
+    <text x="0" y="30" font-family="Arial" font-size="24" fill="#24292e">John Doe's GitHub Stats</text>
+  </g>
+
+  <!-- Main Stats Card -->
+  <g transform="translate(40, 80)">
+    <rect width="720" height="120" rx="6" fill="#ffffff" stroke="#e1e4e8"/>
+    
+    <!-- Stats Grid -->
+    <g transform="translate(20, 20)">
+      <g transform="translate(0, 0)">
+        <rect width="160" height="80" rx="4" fill="#f6f8fa"/>
+        <text x="80" y="35" font-family="Arial" font-size="18" fill="#24292e" text-anchor="middle">Total Stars</text>
+        <text x="80" y="65" font-family="Arial" font-size="24" fill="#2188ff" text-anchor="middle">1.2k</text>
+      </g>
+      
+      <g transform="translate(180, 0)">
+        <rect width="160" height="80" rx="4" fill="#f6f8fa"/>
+        <text x="80" y="35" font-family="Arial" font-size="18" fill="#24292e" text-anchor="middle">Commits</text>
+        <text x="80" y="65" font-family="Arial" font-size="24" fill="#2188ff" text-anchor="middle">3.4k</text>
+      </g>
+      
+      <g transform="translate(360, 0)">
+        <rect width="160" height="80" rx="4" fill="#f6f8fa"/>
+        <text x="80" y="35" font-family="Arial" font-size="18" fill="#24292e" text-anchor="middle">PRs</text>
+        <text x="80" y="65" font-family="Arial" font-size="24" fill="#2188ff" text-anchor="middle">256</text>
+      </g>
+      
+      <g transform="translate(540, 0)">
+        <rect width="160" height="80" rx="4" fill="#f6f8fa"/>
+        <text x="80" y="35" font-family="Arial" font-size="18" fill="#24292e" text-anchor="middle">Issues</text>
+        <text x="80" y="65" font-family="Arial" font-size="24" fill="#2188ff" text-anchor="middle">128</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Contribution Graph -->
+  <g transform="translate(40, 220)">
+    <rect width="720" height="120" rx="6" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="20" y="30" font-family="Arial" font-size="14" fill="#24292e">Contributions</text>
+    
+    <!-- Activity Graph -->
+    <g transform="translate(20, 50)">
+      <rect width="680" height="50" rx="4" fill="#f6f8fa"/>
+      <!-- Activity Bars -->
+      <g transform="translate(20, 10)">
+        <rect width="8" height="30" fill="#40c463"/>
+        <rect x="12" width="8" height="20" fill="#40c463"/>
+        <rect x="24" width="8" height="25" fill="#40c463"/>
+        <rect x="36" width="8" height="15" fill="#40c463"/>
+        <rect x="48" width="8" height="30" fill="#40c463"/>
+        <rect x="60" width="8" height="25" fill="#40c463"/>
+        <rect x="72" width="8" height="20" fill="#40c463"/>
+        <rect x="84" width="8" height="30" fill="#40c463"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Language Stats -->
+  <g transform="translate(40, 360)">
+    <rect width="720" height="20" rx="4" fill="#f6f8fa"/>
+    <rect width="300" height="20" rx="4" fill="#2188ff"/>
+    <rect x="300" width="200" height="20" rx="4" fill="#28a745"/>
+    <rect x="500" width="150" height="20" rx="4" fill="#ea4aaa"/>
+  </g>
+</svg> 

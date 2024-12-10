@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- Dark Theme Background -->
+  <rect width="800" height="400" fill="#0d1117"/>
+  
+  <!-- Header -->
+  <g transform="translate(40, 40)">
+    <text x="0" y="30" font-family="Arial" font-size="24" fill="#c9d1d9">John Doe</text>
+    <text x="0" y="60" font-family="Arial" font-size="16" fill="#8b949e">Senior Software Engineer | Open Source Contributor</text>
+  </g>
+
+  <!-- Featured Projects -->
+  <g transform="translate(40, 120)">
+    <text x="0" y="20" font-family="Arial" font-size="16" fill="#c9d1d9">📌 Featured Projects</text>
+    
+    <!-- Project Cards -->
+    <g transform="translate(0, 40)">
+      <!-- Project 1 -->
+      <rect width="360" height="90" rx="6" fill="#161b22" stroke="#30363d"/>
+      <text x="20" y="30" font-family="Arial" font-size="14" fill="#58a6ff">🚀 Project Alpha</text>
+      <text x="20" y="55" font-family="Arial" font-size="12" fill="#8b949e">A modern web application built with React and Node.js</text>
+      <text x="20" y="75" font-family="Arial" font-size="12" fill="#8b949e">⭐ 120 • 🔄 25</text>
+    </g>
+
+    <!-- Project 2 -->
+    <g transform="translate(380, 40)">
+      <rect width="360" height="90" rx="6" fill="#161b22" stroke="#30363d"/>
+      <text x="20" y="30" font-family="Arial" font-size="14" fill="#58a6ff">💻 Project Beta</text>
+      <text x="20" y="55" font-family="Arial" font-size="12" fill="#8b949e">CLI tool for automated development workflows</text>
+      <text x="20" y="75" font-family="Arial" font-size="12" fill="#8b949e">⭐ 85 • 🔄 12</text>
+    </g>
+  </g>
+
+  <!-- Tech Stack -->
+  <g transform="translate(40, 280)">
+    <text x="0" y="20" font-family="Arial" font-size="16" fill="#c9d1d9">🛠️ Tech Stack</text>
+    
+    <!-- Tech Badges -->
+    <g transform="translate(0, 40)">
+      <rect width="90" height="28" rx="14" fill="#238636"/>
+      <text x="45" y="18" font-family="Arial" font-size="12" fill="white" text-anchor="middle">React</text>
+      
+      <rect x="100" width="90" height="28" rx="14" fill="#1f6feb"/>
+      <text x="145" y="18" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Node.js</text>
+      
+      <rect x="200" width="90" height="28" rx="14" fill="#a371f7"/>
+      <text x="245" y="18" font-family="Arial" font-size="12" fill="white" text-anchor="middle">TypeScript</text>
+      
+      <rect x="300" width="90" height="28" rx="14" fill="#db61a2"/>
+      <text x="345" y="18" font-family="Arial" font-size="12" fill="white" text-anchor="middle">GraphQL</text>
+    </g>
+  </g>
+
+  <!-- GitHub Stats -->
+  <g transform="translate(40, 360)">
+    <text x="0" y="20" font-family="Arial" font-size="12" fill="#8b949e">🏆 4,200+ Contributions in 2023 • 🌟 500+ Stars • 🎯 25+ Projects</text>
+  </g>
+</svg> 

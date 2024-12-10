@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile README Generator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg height="32" viewBox="0 0 16 16" width="32" class="github-logo">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+                <span>README Generator</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Create an Amazing GitHub Profile</h1>
+                <p>Generate your GitHub profile README in minutes with our easy-to-use template builder.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </section>
+
+        <section class="template-selection">
+            <div class="container">
+                <h2>Choose Your Template</h2>
+                
+                <div class="templates-grid">
+                    <div class="template-card" data-template-id="simple">
+                        <div class="template-preview">
+                            <img src="templates/simple-preview.svg" alt="Simple Template Preview">
+                        </div>
+                        <div class="template-content">
+                            <h3>Simple</h3>
+                            <p>Clean and straightforward design</p>
+                            <button class="select-template-btn">Use this template</button>
+                        </div>
+                    </div>
+
+                    <div class="template-card" data-template-id="developer">
+                        <div class="template-preview">
+                            <img src="templates/developer-preview.svg" alt="Developer Template Preview">
+                        </div>
+                        <div class="template-content">
+                            <h3>Developer</h3>
+                            <p>Showcase your projects and skills</p>
+                            <button class="select-template-btn">Use this template</button>
+                        </div>
+                    </div>
+
+                    <div class="template-card" data-template-id="minimal">
+                        <div class="template-preview">
+                            <img src="templates/minimal-preview.svg" alt="Minimal Template Preview">
+                        </div>
+                        <div class="template-content">
+                            <h3>Minimal</h3>
+                            <p>Less is more - focus on what matters</p>
+                            <button class="select-template-btn">Use this template</button>
+                        </div>
+                    </div>
+
+                    <div class="template-card" data-template-id="stats">
+                        <div class="template-preview">
+                            <img src="templates/stats-preview.svg" alt="Stats Template Preview">
+                        </div>
+                        <div class="template-content">
+                            <h3>Stats</h3>
+                            <p>Highlight your GitHub statistics</p>
+                            <button class="select-template-btn">Use this template</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="editor hidden">
+            <div class="container">
+                <div class="editor-header">
+                    <button class="go-back-btn">← Go Back</button>
+                    <h2>Customize Your Profile</h2>
+                </div>
+                <div class="editor-grid">
+                    <div class="editor-inputs">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" placeholder="e.g. Full Stack Developer">
+                        </div>
+                        <div class="form-group">
+                            <label for="about">About Me</label>
+                            <textarea id="about" placeholder="Write a brief introduction about yourself"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Skills</label>
+                            <div class="skills-input">
+                                <input type="text" id="skill-input" placeholder="Add a skill">
+                                <select id="skill-level">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                </select>
+                                <button class="add-skill-btn">Add Skill</button>
+                            </div>
+                            <div class="skills-list"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Projects</label>
+                            <div class="project-input">
+                                <input type="text" id="project-name" placeholder="Project Name">
+                                <input type="text" id="project-description" placeholder="Project Description">
+                                <input type="url" id="project-url" placeholder="Project URL">
+                                <button class="add-project-btn">Add Project</button>
+                            </div>
+                            <div class="projects-list"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Social Links</label>
+                            <div class="social-links">
+                                <div class="social-input">
+                                    <span class="social-icon">🔗</span>
+                                    <input type="url" id="github" placeholder="GitHub Profile URL">
+                                </div>
+                                <div class="social-input">
+                                    <span class="social-icon">💼</span>
+                                    <input type="url" id="linkedin" placeholder="LinkedIn Profile URL">
+                                </div>
+                                <div class="social-input">
+                                    <span class="social-icon">🐦</span>
+                                    <input type="url" id="twitter" placeholder="Twitter/X Profile URL">
+                                </div>
+                                <div class="social-input">
+                                    <span class="social-icon">🌐</span>
+                                    <input type="url" id="website" placeholder="Personal Website URL">
+                                </div>
+                                <div class="social-input">
+                                    <span class="social-icon">✉️</span>
+                                    <input type="email" id="email" placeholder="Email Address">
+                                </div>
+                                <div class="social-input">
+                                    <span class="social-icon">📝</span>
+                                    <input type="url" id="blog" placeholder="Blog URL">
+                                </div>
+                                <div class="social-input">
+                                    <span class="social-icon">🎨</span>
+                                    <input type="url" id="dribbble" placeholder="Dribbble Profile URL">
+                                </div>
+                                <div class="social-input">
+                                    <span class="social-icon">🎥</span>
+                                    <input type="url" id="youtube" placeholder="YouTube Channel URL">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Profile Image</label>
+                            <div class="image-input">
+                                <input type="url" id="profile-image" placeholder="https://github.com/yourusername.png">
+                                <p class="help-text">Use your GitHub profile picture or any other image URL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-section">
+                        <div class="preview-header">
+                            <h3>Preview</h3>
+                            <div class="preview-actions">
+                                <button class="copy-btn">Copy Markdown</button>
+                                <button class="download-btn">Download README</button>
+                            </div>
+                        </div>
+                        <div class="preview-area">
+                            <pre><code class="preview-content"></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with <span class="heart">❤</span> by the Omar Alhami.</p>
+            <a href="https://github.com/yourusername/github-readme-generator" class="github-link" target="_blank">
+                View on GitHub
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

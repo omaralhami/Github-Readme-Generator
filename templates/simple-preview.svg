@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff"/>
+  
+  <!-- Content -->
+  <g transform="translate(40, 40)">
+    <!-- Title -->
+    <text x="0" y="30" font-family="Arial" font-size="24" fill="#24292e">Hi there 👋 I'm John Doe</text>
+    <text x="0" y="60" font-family="Arial" font-size="16" fill="#586069">Full Stack Developer</text>
+
+    <!-- About -->
+    <text x="0" y="100" font-family="Arial" font-size="14" fill="#24292e">Building software with passion and purpose.</text>
+
+    <!-- Skills -->
+    <g transform="translate(0, 130)">
+      <rect width="80" height="24" rx="12" fill="#0366d6"/>
+      <text x="40" y="16" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Python</text>
+      
+      <rect x="90" width="80" height="24" rx="12" fill="#2ea44f"/>
+      <text x="130" y="16" font-family="Arial" font-size="12" fill="white" text-anchor="middle">JavaScript</text>
+    </g>
+
+    <!-- Contact -->
+    <text x="0" y="190" font-family="Arial" font-size="14" fill="#24292e">📫 How to reach me:</text>
+    <text x="0" y="210" font-family="Arial" font-size="14" fill="#0366d6">john.doe@example.com</text>
+  </g>
+
+  <!-- Profile Image -->
+  <circle cx="700" cy="100" r="60" fill="#f6f8fa" stroke="#e1e4e8"/>
+  <path d="M700 70 Q700 90 700 130" stroke="#e1e4e8" stroke-width="2" fill="none"/>
+  <circle cx="700" cy="60" r="20" fill="#e1e4e8"/>
+</svg> 
