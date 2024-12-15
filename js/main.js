@@ -223,26 +223,37 @@ document.addEventListener('DOMContentLoaded', () => {
             updateProjectsList();
             document.getElementById('profile-image').value = '';
 
+            // Handle GitHub username section visibility
+            const githubSection = document.querySelector('.github-section');
+            const githubRequiredBadge = document.querySelector('.required-badge');
+            if (githubSection && githubRequiredBadge) {
+                if (templateId === 'stats' || templateId === 'developer') {
+                    githubSection.style.display = 'block';
+                    githubRequiredBadge.style.display = 'inline-flex';
+                } else {
+                    githubSection.style.display = 'none';
+                    githubRequiredBadge.style.display = 'none';
+                }
+            }
+
             // Pre-fill template-specific content
             switch(templateId) {
                 case 'minimal':
                     document.getElementById('name').value = 'John Doe';
                     document.getElementById('title').value = 'Developer';
                     document.getElementById('about').value = 'Building things with code.';
-                    document.getElementById('github').value = 'https://github.com/johndoe';
+                    document.getElementById('github-username').value = '';
                     document.getElementById('linkedin').value = 'https://linkedin.com/in/johndoe';
-                    document.getElementById('twitter').value = 'https://twitter.com/johndoe';
-                    document.getElementById('profile-image').value = 'https://github.com/johndoe.png';
+                    document.getElementById('profile-image').value = '';
                     break;
 
                 case 'simple':
                     document.getElementById('name').value = 'John Doe';
                     document.getElementById('title').value = 'Full Stack Developer';
                     document.getElementById('about').value = 'Building software with passion and purpose.';
-                    document.getElementById('github').value = 'https://github.com/johndoe';
+                    document.getElementById('github-username').value = '';
                     document.getElementById('linkedin').value = 'https://linkedin.com/in/johndoe';
-                    document.getElementById('twitter').value = 'https://twitter.com/johndoe';
-                    document.getElementById('profile-image').value = 'https://github.com/johndoe.png';
+                    document.getElementById('profile-image').value = '';
                     
                     skills = [
                         { name: 'JavaScript', level: 'advanced' },
@@ -256,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('name').value = 'John Doe';
                     document.getElementById('title').value = 'Senior Software Engineer | Open Source Contributor';
                     document.getElementById('about').value = 'Passionate software engineer with expertise in full-stack development and cloud technologies.';
-                    document.getElementById('github').value = 'https://github.com/johndoe';
+                    document.getElementById('github-username').value = 'johndoe';
                     document.getElementById('linkedin').value = 'https://linkedin.com/in/johndoe';
                     document.getElementById('twitter').value = 'https://twitter.com/johndoe';
                     document.getElementById('profile-image').value = 'https://github.com/johndoe.png';
@@ -287,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('name').value = 'John Doe';
                     document.getElementById('title').value = 'Software Developer';
                     document.getElementById('about').value = 'Open source enthusiast and full-stack developer.';
-                    document.getElementById('github').value = 'https://github.com/johndoe';
+                    document.getElementById('github-username').value = 'johndoe';
                     document.getElementById('linkedin').value = 'https://linkedin.com/in/johndoe';
                     document.getElementById('twitter').value = 'https://twitter.com/johndoe';
                     document.getElementById('profile-image').value = 'https://github.com/johndoe.png';
@@ -319,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = document.getElementById('name')?.value || '';
         const title = document.getElementById('title')?.value || '';
         const about = document.getElementById('about')?.value || '';
-        const github = document.getElementById('github')?.value || '';
+        const githubUsername = document.getElementById('github-username')?.value || '';
         const linkedin = document.getElementById('linkedin')?.value || '';
         const twitter = document.getElementById('twitter')?.value || '';
         const website = document.getElementById('website')?.value || '';
@@ -362,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 markdown += `### Connect With Me\n`;
                 let contacts = [];
-                if (github) contacts.push(`[GitHub](${github})`);
+                if (githubUsername) contacts.push(`[GitHub](https://github.com/${githubUsername})`);
                 if (linkedin) contacts.push(`[LinkedIn](${linkedin})`);
                 if (twitter) contacts.push(`[Twitter](${twitter})`);
                 if (website) contacts.push(`[Website](${website})`);
@@ -378,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     markdown += `<img src="${profileImageUrl}" alt="Profile" width="200" height="200" style="border-radius: 50%; margin-bottom: 20px;">\n\n`;
                 }
                 markdown += `# Hi there 👋 I'm ${name}\n\n${title}\n\n${about}\n\n## 🔗 Connect with me\n`;
-                if (github) markdown += `[![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white)](${github})\n`;
+                if (githubUsername) markdown += `[![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/${githubUsername})\n`;
                 if (linkedin) markdown += `[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white)](${linkedin})\n`;
                 if (twitter) markdown += `[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](${twitter})\n`;
                 if (website) markdown += `[![Website](https://img.shields.io/badge/Website-4CAF50?style=for-the-badge&logo=Google-Chrome&logoColor=white)](${website})\n`;
@@ -425,16 +436,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     markdown += '\n';
                 }
                 
-                if (github) {
-                    const username = github.split('/').pop();
+                if (githubUsername) {
                     markdown += `📊 **GitHub Stats**\n`;
                     markdown += `<p align="center">\n`;
-                    markdown += `  <img src="https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=dark" alt="GitHub Stats" />\n`;
-                    markdown += `  <img src="https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=dark" alt="GitHub Streak" />\n`;
+                    markdown += `  <img src="https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=dark" alt="GitHub Stats" />\n`;
+                    markdown += `  <img src="https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=dark" alt="GitHub Streak" />\n`;
                     markdown += `</p>\n\n`;
                 }
                 
                 markdown += `🤝 **Connect With Me**\n`;
+                if (githubUsername) markdown += `- [GitHub](https://github.com/${githubUsername})\n`;
                 if (linkedin) markdown += `- [LinkedIn](${linkedin})\n`;
                 if (twitter) markdown += `- [Twitter](${twitter})\n`;
                 if (website) markdown += `- [Website](${website})\n`;
@@ -445,15 +456,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
                 
             case 'stats':
-                if (github) {
-                    const username = github.split('/').pop();
+                if (githubUsername) {
                     markdown = `# ${name}'s GitHub Stats\n\n<div align="center">\n\n`;
                     if (profileImageUrl) {
                         markdown += `<img src="${profileImageUrl}" alt="Profile" width="200" height="200" style="border-radius: 50%; margin-bottom: 20px;">\n\n`;
                     }
-                    markdown += `![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=radical)\n\n`;
-                    markdown += `![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=radical)\n\n`;
-                    markdown += `![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical)\n\n`;
+                    markdown += `![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=radical)\n\n`;
+                    markdown += `![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=radical)\n\n`;
+                    markdown += `![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=radical)\n\n`;
                     
                     if (skills.length > 0) {
                         markdown += `### Skills\n`;
@@ -466,6 +476,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     
                     markdown += `### Connect With Me\n`;
+                    if (githubUsername) markdown += `[![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/${githubUsername})\n`;
                     if (linkedin) markdown += `[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white)](${linkedin})\n`;
                     if (twitter) markdown += `[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](${twitter})\n`;
                     if (website) markdown += `[![Website](https://img.shields.io/badge/Website-4CAF50?style=for-the-badge&logo=Google-Chrome&logoColor=white)](${website})\n`;
@@ -475,14 +486,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (email) markdown += `[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:${email})\n\n`;
                     
                     markdown += `### Contributions\n`;
-                    markdown += `![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=${username}&theme=react-dark)\n\n`;
+                    markdown += `![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=react-dark)\n\n`;
                     markdown += `### Profile Views\n`;
-                    markdown += `![Profile Views](https://komarev.com/ghpvc/?username=${username}&color=blueviolet)\n\n`;
+                    markdown += `![Profile Views](https://komarev.com/ghpvc/?username=${githubUsername}&color=blueviolet)\n\n`;
                     markdown += `### Trophy Case\n`;
-                    markdown += `![Trophies](https://github-profile-trophy.vercel.app/?username=${username}&theme=darkhub&row=1)\n\n`;
+                    markdown += `![Trophies](https://github-profile-trophy.vercel.app/?username=${githubUsername}&theme=darkhub&row=1)\n\n`;
                     markdown += `</div>`;
                 } else {
-                    markdown = `# ${name}'s GitHub Stats\n\nPlease add your GitHub profile URL to see the stats.`;
+                    markdown = `# ${name}'s GitHub Stats\n\nPlease add your GitHub username to see the stats.`;
                 }
                 break;
         }

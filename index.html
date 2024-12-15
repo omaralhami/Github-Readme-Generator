@@ -18,6 +18,16 @@
             </div>
         </div>
     </header>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLKGGZD0SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLKGGZD0SL');
+</script>
 
     <main>
         <section class="hero">
@@ -88,6 +98,17 @@
                 </div>
                 <div class="editor-grid">
                     <div class="editor-inputs">
+                        <div class="form-group github-section" style="display: none;">
+                            <label>GitHub Username <span class="required-badge" style="display: none;">Required for stats</span></label>
+                            <p class="help-text">✨ This will be used to generate your GitHub stats and connect all features</p>
+                            <div class="github-inputs">
+                                <div class="social-input">
+                                    <span class="social-icon">🔗</span>
+                                    <input type="text" id="github-username" placeholder="Enter your GitHub username (without @)">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" placeholder="Your name">
@@ -128,10 +149,6 @@
                         <div class="form-group">
                             <label>Social Links</label>
                             <div class="social-links">
-                                <div class="social-input">
-                                    <span class="social-icon">🔗</span>
-                                    <input type="url" id="github" placeholder="GitHub Profile URL">
-                                </div>
                                 <div class="social-input">
                                     <span class="social-icon">💼</span>
                                     <input type="url" id="linkedin" placeholder="LinkedIn Profile URL">
