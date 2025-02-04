@@ -1,12 +1,12 @@
 # GitHub Profile README Generator
 
-A modern web application that helps you create beautiful and informative GitHub profile READMEs with ease.
+> A modern web application to create beautiful GitHub profile READMEs with ease
 
-[![GitHub Profile README Generator](https://github.com/only-mar/github-readme-generator/blob/main/image/image.png)](https://github-readmegenerator.netlify.app/)
+[![Preview](https://github.com/only-mar/github-readme-generator/blob/main/image/image.png)](https://github-readmegenerator.netlify.app/)
 
 🌐 **[Try it now](https://github-readmegenerator.netlify.app/)**
 
-## Features
+## 🌟 Features
 
 - 🎨 Multiple pre-designed templates
 - ✏️ Easy-to-use visual editor
@@ -14,49 +14,42 @@ A modern web application that helps you create beautiful and informative GitHub 
 - 📱 Responsive design
 - 🔄 Copy & paste generated README
 
-## Getting Started
+## 🚀 Getting Started
 
 1. Visit [GitHub Profile README Generator](https://github-readmegenerator.netlify.app/)
 2. Choose a template
 3. Customize your content
 4. Preview and copy your README
 
-## Development
+## 🔧 Development
 
-This project is built with:
+**Technologies:**
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-
-To run locally:
-
-1. Clone the repository
 ```bash
+# Clone repository
 git clone https://github.com/only-mar/github-readme-generator.git
+
+# Open project
+open index.html
 ```
 
-2. Open `index.html` in your browser
+## 🤝 Contributing
 
-## Contributing
+Contributions welcome! Submit a Pull Request.
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 📄 License
 
-## Author
+MIT License
 
-- **Omar Alhami (Mar)**
-- GitHub: [@only-mar](https://github.com/only-mar)
-- Email: omar.alhami@outlook.com
+<div align="center">
+  
+**Made with ❤️ by Mar**
 
-<a href="https://www.buymeacoffee.com/onlymar" target="_blank">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50px">
-</a>
+> Built with curiosity, caffeine, and late nights. If you like it, let's connect!
 
-## License
+[GitHub](https://github.com/only-mar) • [Discord](link) • [Instagram](link)
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Built with ❤️ by Omar Alhami
-- Inspired by the GitHub community's creative profile READMEs 
+</div>
