@@ -50,6 +50,6 @@ MIT License
 
 > Built with curiosity, caffeine, and late nights. If you like it, let's connect!
 
-[GitHub](https://github.com/only-mar) • [Discord](link) • [Instagram](link)
+[Discord](link)  •  [Instagram](link)  •  [Buy Me a Coffee](https://buymeacoffee.com/onlymar)
 
 </div>
