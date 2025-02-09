@@ -66,6 +66,6 @@ Made with ❤️ by Mar
 
 > Built with curiosity, caffeine, and late nights. If you like it, let's connect!
 
-[Discord](https://discord.gg/tr9BR9ZCrA)  •  [Instagram](https://www.instagram.com/16.72/)  •  [Buy me a coffee](https://buymeacoffee.com/onlymar)
+[Discord](https://discord.gg/xywrsneY8b)  •  [Instagram](https://www.instagram.com/16.72/)  •  [Buy me a coffee](https://buymeacoffee.com/onlymar)
 
 </div>
